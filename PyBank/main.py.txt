@@ -1,0 +1,41 @@
+#import modules
+
+import os
+import csv
+
+#set path to csv file in PyBank
+file_path = ""C:\Users\Samanthi Nisanka\Desktop\bootcamp\python-challenge\PyBank\Resources\budget_data.csv"
+
+#store data
+months=[]
+
+#variables
+count = 0
+
+#open the csv
+ 
+ with open(file_path, newline="") as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
+    csv_header = next(csvreader)
+
+for row in csvreader:
+
+#count number of months
+
+count = count + 1
+
+
+print("----------------------------------------------------------")
+    print("Financial Analysis")
+    print("----------------------------------------------------------")
+
+    print("Total Months: " + str(count))
+
+    
+    
+    with open('Financial_Analysis.txt', 'w') as text
+     
+    text.write("----------------------------------------------------------\n")
+    text.write("  Financial Analysis"+ "\n")
+    text.write("----------------------------------------------------------\n\n")
+    text.write("    Total Months: " + str(count) + "\n")
